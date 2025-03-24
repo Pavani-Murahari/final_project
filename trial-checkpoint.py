@@ -78,7 +78,7 @@ plot_graph('Age', 'BMI', user_data['Age'][0], user_data['BMI'][0], 'BMI Value Gr
 plot_graph('Age', 'DiabetesPedigreeFunction', user_data['Age'][0], user_data['DiabetesPedigreeFunction'][0], 'DPF Value Graph (Others vs Yours)', 'YlOrBr', (10, 100, 5), (0, 3, 0.2))
 
 st.subheader('Your Report:')
-output = 'You are Diabetic' if user_result[0] == 0 else 'You are Not Diabetic'
+output = 'You are not Diabetic' if user_result[0] == 0 else 'You are Diabetic'
 st.title(output)
 st.subheader('Accuracy:')
 st.write(f"{accuracy_score(y_test, rf.predict(x_test)) * 100:.2f}%")
